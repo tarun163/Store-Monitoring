@@ -21,5 +21,5 @@ from store import views
 urlpatterns = [
     path('trigger_report/', views.trigger_report, name='trigger-report'), 
     path('get_report/', views.get_report, name='get-report'), 
-    path('trigger/', views.generate_report, name='generate-report')
+    path('trigger/', views.generate_report_one, name='generate-report')
 ]

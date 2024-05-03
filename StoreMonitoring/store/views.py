@@ -55,10 +55,10 @@ def get_report(request):
 def generate_report_one(request):
     report_id = request.GET.get('report_id')
     # Fetch all stores
-    stores = StoreData.objects.all()
+    stores = StoreData.objects.all()[:200]
     # Prepare a list to collect report data
     report_data = []
-    current_timestamp = datetime.utcnow() - timedelta(days=466)
+    current_timestamp = datetime.utcnow() - timedelta(days=467)
     print("current-time", current_timestamp)
     for store in stores:
         # Define time ranges for report calculations: last hour, last day, last week
